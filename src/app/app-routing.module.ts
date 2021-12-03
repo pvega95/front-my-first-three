@@ -16,7 +16,27 @@ const routes: Routes = [
       {
         path: 'home',
         loadChildren: () => import('./modules/home/home.module').then((m) => m.HomeModule),
-      }
+      },
+      {
+        path: 'user',
+        loadChildren: () => import('./modules/user/user.module').then((m) => m.UserModule),
+      },
+      {
+        path: 'content',
+        loadChildren: () => import('./modules/content/content.module').then((m) => m.ContentModule),
+      },
+      {
+        path: 'vocabulary',
+        loadChildren: () => import('./modules/vocabulary/vocabulary.module').then((m) => m.VocabularyModule),
+      },
+      {
+        path: 'notification',
+        loadChildren: () => import('./modules/notification/notification.module').then((m) => m.NotificationModule),
+      },
+      {
+        path: 'report',
+        loadChildren: () => import('./modules/report/report.module').then((m) => m.ReportModule),
+      },
     ]
   },
   // { path: '404', component: PageNotFoundComponent },

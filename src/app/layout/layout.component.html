@@ -1,28 +1,56 @@
 <nz-layout>
-    <nz-sider nzCollapsible nzWidth="200px">
-      <div class="logo"></div>
-      <ul nz-menu nzTheme="dark" nzMode="inline">
-        <li nz-submenu nzTitle="User" nzIcon="user">
-          <ul>
-            <li nz-menu-item>Tom</li>
-            <li nz-menu-item>Bill</li>
-            <li nz-menu-item>Alex</li>
-          </ul>
-        </li>
-        <li nz-submenu nzTitle="Team" nzIcon="team">
-          <ul>
-            <li nz-menu-item>Team 1</li>
-            <li nz-menu-item>Team 2</li>
-          </ul>
-        </li>
-        <li nz-menu-item>
+    <nz-sider nzCollapsible nzWidth="200px" nzTheme="light">
+      <div class="logo">
+        <img src="assets/images/logo/logo.png" />
+      </div>
+      <ul nz-menu nzTheme="light" nzMode="inline">
+        <li nz-menu-item
+         [nzSelected]="this.isSelected('/home')" 
+         routerLink="/home" 
+         routerLinkActive="active"
+         >
           <i nz-icon nzType="file"></i>
-          <span>File</span>
+          <span>Home</span>
+        </li>
+        <li nz-menu-item
+        [nzSelected]="this.isSelected('/user')" 
+         routerLink="/user" 
+         routerLinkActive="active">
+          <i nz-icon nzType="file"></i>
+          <span>Usuario</span>
+        </li>
+        <li nz-menu-item
+        [nzSelected]="this.isSelected('/content')" 
+         routerLink="/content" 
+         routerLinkActive="active">
+          <i nz-icon nzType="file"></i>
+          <span>Contenido</span>
+        </li>
+        <li nz-menu-item
+        [nzSelected]="this.isSelected('/vocabulary')" 
+         routerLink="/vocabulary" 
+         routerLinkActive="active">
+          <i nz-icon nzType="file"></i>
+          <span>Vocabulario</span>
+        </li>
+        <li nz-menu-item 
+        [nzSelected]="this.isSelected('/notification')" 
+         routerLink="/notification" 
+         routerLinkActive="active">
+          <i nz-icon nzType="file"></i>
+          <span>Notificaciones</span>
+        </li>
+        <li nz-menu-item
+        [nzSelected]="this.isSelected('/report')" 
+         routerLink="/report" 
+         routerLinkActive="active">
+          <i nz-icon nzType="file"></i>
+          <span>Reporte</span>
         </li>
       </ul>
     </nz-sider>
     <nz-layout>
-      <nz-header></nz-header>
+      <!-- <nz-header></nz-header> -->
       <nz-content>
         <nz-breadcrumb>
           <nz-breadcrumb-item>User</nz-breadcrumb-item>
@@ -30,6 +58,5 @@
         </nz-breadcrumb>
         <router-outlet></router-outlet>
       </nz-content>
-      <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
     </nz-layout>
   </nz-layout>

@@ -2,6 +2,9 @@
     height: 32px;
     background: rgba(255, 255, 255, 0.2);
     margin: 16px;
+    img {
+      height: inherit;
+    }
   }
 
   nz-layout {
@@ -14,7 +17,7 @@
   }
 
   nz-content {
-    margin: 0 16px;
+    margin: 32px;
   }
 
   nz-breadcrumb {

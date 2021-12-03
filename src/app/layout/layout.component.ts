@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'app-layout',
@@ -6,8 +7,17 @@ import { Component, OnInit } from "@angular/core";
     styleUrls: ['./layout.component.scss'],
   })
   export class LayoutComponent implements OnInit {
-    ngOnInit(): void {
-        throw new Error("Method not implemented.");
+
+    constructor(private router: Router) {
+      
     }
+    
+    ngOnInit(): void {
+       
+    }
+
+    isSelected(route: string): boolean {
+      return route === this.router.url;
+  }
 
   }
