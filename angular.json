@@ -31,7 +31,12 @@
               "src/styles.scss",
               "src/ng-zorro.less"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                  "src/themes/"
+              ]
+            }
           },
           "configurations": {
             "production": {
