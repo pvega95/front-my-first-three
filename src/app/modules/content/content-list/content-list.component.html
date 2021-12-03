@@ -1,1 +1,26 @@
-<p>Content list works!</p>
+<nz-table #basicTable [nzData]="listOfData">
+    <thead>
+      <tr>
+        <th>Titulo</th>
+        <th>Autor</th>
+        <th>Estatus</th>
+        <th>Tipo</th>
+        <th>F.Actualizacion</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>{{ data.title }}</td>
+        <td>{{ data.author }}</td>
+        <td>{{ data.status }}</td>
+        <td>{{ data.type }}</td>
+        <td>{{ data.updatedAt | date }}</td>
+        <td>
+          <a>Editar</a>
+          <nz-divider nzType="vertical"></nz-divider>
+          <a>Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
