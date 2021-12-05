@@ -1,0 +1,58 @@
+<div class="">
+    <h2>{{ title }}</h2>
+</div>
+
+<form nz-form [formGroup]="validateForm" class="ant-advanced-search-form">
+  <div nz-row [nzGutter]="24">
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label nzFor="title">Título</nz-form-label>
+        <nz-form-control nzErrorTip="The input is not valid E-mail!">
+          <input nz-input formControlName="title" id="title" />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label nzFor="category">Categoría</nz-form-label>
+        <nz-form-control nzErrorTip="The input is not valid E-mail!">
+          <!-- <input nz-input formControlName="category" id="category" /> -->
+          <nz-select formControlName="category">
+            <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+            <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label nzFor="content">Contenido</nz-form-label>
+        <nz-form-control nzErrorTip="The input is not valid E-mail!">
+          <input nz-input formControlName="content" id="content" />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label nzFor="typeContent">T.Contenido</nz-form-label>
+        <nz-form-control nzErrorTip="The input is not valid E-mail!">
+          <input nz-input formControlName="typeContent" id="typeContent" />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label nzFor="status">Estado</nz-form-label>
+        <nz-form-control nzErrorTip="The input is not valid E-mail!">
+          <input nz-input formControlName="status" id="status" />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row>
+    <div nz-col [nzSpan]="24" class="search-area">
+      <app-back-button [routerLink]="['/content']"></app-back-button>
+      <button class="ml-1" nz-button [nzType]="'primary'">{{ primaryAction }}</button>
+    </div>
+  </div>
+</form>

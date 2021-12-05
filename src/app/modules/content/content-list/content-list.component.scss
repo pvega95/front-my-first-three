@@ -1,0 +1,9 @@
+.content {
+    padding: 1rem;
+    background-color: white;
+    margin-bottom: 1rem;
+    &__search {
+       display: flex;
+       gap: 0.5rem;
+    }
+}

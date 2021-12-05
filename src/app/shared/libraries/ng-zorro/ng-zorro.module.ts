@@ -33,6 +33,7 @@ import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzModalModule } from 'ng-zorro-antd/modal';
 
 // Import what you need. RECOMMENDED. ✔️
 import { HeartOutline, ShoppingOutline, ShoppingCartOutline, LikeOutline, DislikeOutline, LikeTwoTone, DislikeTwoTone, LockOutline, UserOutline, LogoutOutline, PlusOutline } from '@ant-design/icons-angular/icons';
@@ -80,6 +81,7 @@ const MODULES = [
   NzCardModule,
   NzDropDownModule,
   NzDividerModule,
+  NzModalModule
 ];
 
 @NgModule({

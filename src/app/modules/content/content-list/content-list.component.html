@@ -1,3 +1,18 @@
+<div class="content">
+  <div class="content__search">
+    <nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="suffixIconButton">
+      <input type="text" nz-input placeholder="input search text" />
+    </nz-input-group>
+    <button nz-button class="" [nzType]="'primary'"  [nzSize]="'large'" (click)="addContent()">
+      Agregar Nuevo
+    </button>
+  </div>
+</div>
+
+<ng-template #suffixIconButton>
+  <button nz-button nzType="primary" nzSearch><i nz-icon nzType="search"></i></button>
+</ng-template>
+
 <nz-table #basicTable [nzData]="listOfData">
     <thead>
       <tr>
@@ -17,9 +32,9 @@
         <td>{{ data.type }}</td>
         <td>{{ data.updatedAt | date }}</td>
         <td>
-          <a>Editar</a>
+          <a (click)="edit('123')">Editar</a>
           <nz-divider nzType="vertical"></nz-divider>
-          <a>Delete</a>
+          <a (click)="delete()">Delete</a>
         </td>
       </tr>
     </tbody>

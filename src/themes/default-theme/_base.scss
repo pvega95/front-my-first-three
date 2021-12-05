@@ -50,10 +50,11 @@ p {
   // margin-bottom: 2.25rem;
 }
 
-a, a:visited, a:hover {
+a,
+a:visited,
+a:hover {
   text-decoration: none;
 }
-
 
 // Padding
 .p-1 {
@@ -117,6 +118,13 @@ a, a:visited, a:hover {
   color: $white;
 }
 
+// card container
+.card {
+  padding: 1rem;
+  background-color: $white;;
+  margin-bottom: 1rem;
+}
+
 // Spacing
 .container {
   max-width: 110rem;
@@ -128,7 +136,7 @@ a, a:visited, a:hover {
     padding-bottom: 4.375rem;
     padding-left: 1.5rem;
 
-    @include breakpoint-up(large){
+    @include breakpoint-up(large) {
       padding-top: 2.5rem;
       padding-bottom: 2.5rem;
     }
@@ -136,8 +144,8 @@ a, a:visited, a:hover {
   &--py {
     padding-top: 4.375rem;
     padding-bottom: 4.375rem;
-    
-    @include breakpoint-up(large){
+
+    @include breakpoint-up(large) {
       padding-top: 2.5rem;
       padding-bottom: 2.5rem;
     }
@@ -148,8 +156,8 @@ a, a:visited, a:hover {
   }
   &--pt {
     padding-top: 4.375rem;
-    
-    @include breakpoint-up(large){
+
+    @include breakpoint-up(large) {
       padding-top: 2.5rem;
     }
   }
@@ -158,15 +166,15 @@ a, a:visited, a:hover {
   }
   &--pb {
     padding-bottom: 4.375rem;
-    
-    @include breakpoint-up(large){
+
+    @include breakpoint-up(large) {
       padding-bottom: 2.5rem;
     }
   }
   &--pl {
     padding-left: 1.5rem;
   }
-  
+
   &--my {
     margin-top: 1.375rem;
     margin-bottom: 1.375rem;
@@ -189,31 +197,31 @@ a, a:visited, a:hover {
   &-jc-sb {
     justify-content: space-between;
   }
-  
+
   &-jc-c {
     justify-content: center;
   }
-  
+
   &-ai-c {
     align-items: center;
   }
 }
 
 // }
-// Align 
+// Align
 .txt-center {
   text-align: center;
 }
 
 // Visibility
 .hide-for-mobile {
-  @include breakpoint-down(medium){
+  @include breakpoint-down(medium) {
     display: none;
   }
 }
 
 .hide-for-desktop {
-  @include breakpoint-up(large){
+  @include breakpoint-up(large) {
     display: none;
   }
 }
