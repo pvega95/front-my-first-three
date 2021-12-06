@@ -21,7 +21,7 @@ export const ROUTES: Routes = [
       },
       {
         path: 'add/:id',
-        data: { title: 'Agregar/Editar contenido' },
+        data: { title: 'Editar contenido' },
         component: ContentAddComponent,
       }
     ]

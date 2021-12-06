@@ -47,13 +47,6 @@ export class ContentAddComponent {
     });
   }
 
-  toggleCollapse(): void {
-    this.isCollapse = !this.isCollapse;
-    this.controlArray.forEach((c, index) => {
-      c.show = this.isCollapse ? index < 6 : true;
-    });
-  }
-
   resetForm(): void {
     this.validateForm.reset();
   }

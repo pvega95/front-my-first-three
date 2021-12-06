@@ -6,3 +6,8 @@ export interface INotification {
     concurrence: string;
     status: string;
 }
+
+export interface INotificationList {
+    title: string;
+    status: string;
+}

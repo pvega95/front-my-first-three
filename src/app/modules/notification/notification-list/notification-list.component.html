@@ -1,1 +1,28 @@
-<p>Notification list works!</p>
+<div class="notification">
+    <div class="notification__search">
+      <button nz-button class="" [nzType]="'primary'"  [nzSize]="'large'" (click)="addNotification()">
+        Agregar Nuevo
+      </button>
+    </div>
+  </div>
+
+<nz-table #basicTable [nzData]="listOfData">
+    <thead>
+      <tr>
+        <th>Notificacion</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>{{ data.title }}</td>
+        <td>{{ data.status }}</td>
+        <td>
+          <a>Detail</a>
+          <nz-divider nzType="vertical"></nz-divider>
+          <a>Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>

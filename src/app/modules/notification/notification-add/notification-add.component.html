@@ -1,0 +1,73 @@
+<div class="">
+  <h2>{{ title }}</h2>
+</div>
+
+<form nz-form [formGroup]="validateForm" class="ant-advanced-search-form" (ngSubmit)="onSubmit()">
+  <nz-divider nzText="Datos Generales" nzOrientation="left"></nz-divider>
+  <div nz-row [nzGutter]="24">
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label nzFor="title">Título</nz-form-label>
+        <nz-form-control nzErrorTip="The input is not valid E-mail!">
+          <input nz-input formControlName="title" id="title" />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label nzFor="description">Descripcion</nz-form-label>
+        <nz-form-control nzErrorTip="The input is not valid E-mail!">
+          <input nz-input formControlName="description" id="description" />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <nz-divider nzText="Programacion" nzOrientation="left"></nz-divider>
+  <div nz-row [nzGutter]="24">
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label nzFor="programation">Fecha</nz-form-label>
+        <nz-form-control nzErrorTip="The input is not valid E-mail!">
+          <nz-date-picker
+            formControlName="programation"
+            id="programation"
+            (ngModelChange)="onChange($event)"
+          ></nz-date-picker>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label nzFor="concurrence" nzRequired>Hora</nz-form-label>
+        <nz-form-control >
+          <nz-time-picker formControlName="concurrence"></nz-time-picker>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <nz-divider nzText="Imagen" nzOrientation="left"></nz-divider>
+  <div nz-row [nzGutter]="24">
+    <nz-form-item>
+      <nz-form-label nzFor="concurrence">Imagen</nz-form-label>
+      <nz-upload [(nzFileList)]="fileList" [nzBeforeUpload]="beforeUpload">
+        <button nz-button><i nz-icon nzType="upload"></i>Upload</button>
+      </nz-upload>
+      <!-- <nz-upload
+      nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+      [nzHeaders]="{ authorization: 'authorization-text' }"
+      (nzChange)="handleChange($event)"
+    >
+      <button nz-button><i nz-icon nzType="upload"></i>Click to Upload</button>
+    </nz-upload> -->
+    </nz-form-item>
+    
+  </div>
+  <div nz-row>
+    <div nz-col [nzSpan]="24" class="search-area">
+      <app-back-button [routerLink]="['/notification']"></app-back-button>
+      <button class="ml-1" nz-button [nzType]="'primary'" type="submit">
+        {{ primaryAction }}
+      </button>
+    </div>
+  </div>
+</form>

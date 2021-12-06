@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-back-button',
@@ -9,8 +10,12 @@ export class BackButtonComponent implements OnInit {
   @Input() routerLink: any[] | string | null | undefined;
   @Input() text = 'Cancelar';
   @Output() clicked = new EventEmitter();
+  returnUrl: string;
 
-  constructor() {}
+  constructor(
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
 }

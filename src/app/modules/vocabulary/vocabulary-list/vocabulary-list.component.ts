@@ -29,4 +29,7 @@ export class VocabularyListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addVocabulary(){
+    
+  }
 }

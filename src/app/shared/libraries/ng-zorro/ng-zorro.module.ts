@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzInputModule } from 'ng-zorro-antd/input';
@@ -12,7 +11,6 @@ import { NzSliderModule } from 'ng-zorro-antd/slider';
 import { NzDrawerModule } from 'ng-zorro-antd/drawer';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzAvatarModule } from 'ng-zorro-antd/avatar';
-
 import { IconDefinition } from '@ant-design/icons-angular';
 import { NzBackTopModule } from 'ng-zorro-antd/back-top';
 import { NzMessageModule } from 'ng-zorro-antd/message';
@@ -34,11 +32,12 @@ import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+import { NzTimePickerModule } from 'ng-zorro-antd/time-picker';
+import { NzUploadModule } from 'ng-zorro-antd/upload';
 
 // Import what you need. RECOMMENDED. ✔️
-import { HeartOutline, ShoppingOutline, ShoppingCartOutline, LikeOutline, DislikeOutline, LikeTwoTone, DislikeTwoTone, LockOutline, UserOutline, LogoutOutline, PlusOutline } from '@ant-design/icons-angular/icons';
-
-const icons: IconDefinition[] = [ 
+import {
   HeartOutline,
   ShoppingOutline,
   ShoppingCartOutline,
@@ -49,7 +48,23 @@ const icons: IconDefinition[] = [
   LockOutline,
   UserOutline,
   LogoutOutline,
-  PlusOutline
+  PlusOutline,
+  DeleteOutline
+} from '@ant-design/icons-angular/icons';
+
+const icons: IconDefinition[] = [
+  HeartOutline,
+  ShoppingOutline,
+  ShoppingCartOutline,
+  LikeOutline,
+  DislikeOutline,
+  LikeTwoTone,
+  DislikeTwoTone,
+  LockOutline,
+  UserOutline,
+  LogoutOutline,
+  PlusOutline,
+  DeleteOutline
 ];
 
 const MODULES = [
@@ -81,7 +96,10 @@ const MODULES = [
   NzCardModule,
   NzDropDownModule,
   NzDividerModule,
-  NzModalModule
+  NzModalModule,
+  NzDatePickerModule,
+  NzTimePickerModule,
+  NzUploadModule,
 ];
 
 @NgModule({
@@ -89,9 +107,8 @@ const MODULES = [
   providers: [
     { provide: NZ_I18N, useValue: en_US },
     { provide: NZ_ICONS, useValue: icons },
-    
   ],
   exports: [...MODULES],
   declarations: [],
 })
-export class NgZorroModule { }
+export class NgZorroModule {}
